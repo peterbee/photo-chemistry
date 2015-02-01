@@ -25,7 +25,7 @@ chemistry.service('PhotoProvider', [function() {
             href: 'http://www.homes.com/property/126-garfield-st-denver-co-80206/id-500012499568/',
             photos: [
                 {
-                    tag: 'main',
+                    tag: 'front',
                     src: '//cdn.homes.com/cgi-bin/readimage/3906220017'
                 },
                 {
@@ -83,11 +83,11 @@ chemistry.service('PhotoProvider', [function() {
             href: 'http://www.homes.com/property/4600-e-3rd-ave-denver-co-80220/id-500012548072/',
             photos: [
                 {
-                    tag: 'main',
+                    tag: 'front',
                     src: '//cdn.homes.com/cgi-bin/readimage/3906221971'
                 },
                 {
-                    tag: 'main',
+                    tag: 'front',
                     src: '//cdn.homes.com/cgi-bin/readimage/3906222186'
                 },
                 {
@@ -149,7 +149,7 @@ chemistry.service('PhotoProvider', [function() {
             href: 'http://www.homes.com/property/2851-perry-st-denver-co-80212/id-500012458402/',
             photos: [
                 {
-                    tag: 'main',
+                    tag: 'front',
                     src: '//cdn-5.eneighborhoods.com/x2/@v=-1572771066@/105/4/475/4741475/4741475_1.jpg'
                 },
                 {
@@ -195,7 +195,7 @@ chemistry.service('PhotoProvider', [function() {
             href: 'http://www.homes.com/property/2815-humboldt-st-denver-co-80205/id-500012449170/',
             photos: [
                 {
-                    tag: 'main',
+                    tag: 'front',
                     src: '//cdn.homes.com/cgi-bin/readimage/3906122941'
                 },
                 {
@@ -285,11 +285,11 @@ chemistry.service('PhotoProvider', [function() {
             href: 'http://www.homes.com/property/4440-tule-lake-dr-littleton-co-80123/id-500012272959/',
             photos: [
                 {
-                    tag: 'main',
+                    tag: 'front',
                     src: '//cdn.homes.com/cgi-bin/readimage/a3c38701abab3703dbacd6e812f8fa8d'
                 },
                 {
-                    tag: 'main',
+                    tag: 'front',
                     src: '//cdn.homes.com/cgi-bin/readimage/c38533794452eae707c211e389474ec3'
                 },
                 {
@@ -371,7 +371,7 @@ chemistry.service('PhotoProvider', [function() {
             href: 'http://www.homes.com/property/2229-blake-st-denver-co-80205/id-500023385066/',
             photos: [
                 {
-                    tag: 'main',
+                    tag: 'front',
                     src: '//res.cloudinary.com/dpw5dquix/image/upload/v1422817682/7483748.jpg'
                 },
                 {
@@ -409,7 +409,7 @@ chemistry.service('PhotoProvider', [function() {
             href: 'http://www.homes.com/property/12738-w-grizzly-dr-littleton-co-80127/id-500013078289/',
             photos: [
                 {
-                    tag: 'main',
+                    tag: 'front',
                     src: '//cdn.homes.com/cgi-bin/readimage/cc5515d9b9befba65e836c4881b1b98b'
                 },
                 {
@@ -475,7 +475,7 @@ chemistry.service('PhotoProvider', [function() {
             href: 'http://www.homes.com/property/10000-e-yale-ave-denver-co-80231/id-500012572859/',
             photos: [
                 {
-                    tag: 'main',
+                    tag: 'front',
                     src: '//cdn.homes.com/cgi-bin/readimage/3906221618'
                 },
                 {
