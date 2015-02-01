@@ -543,6 +543,166 @@ chemistry.service('PhotoProvider', [function() {
                     src: '//cdn.homes.com/cgi-bin/readimage/3906222375'
                 }
             ]
+        },
+        {
+            id: 2195316,
+            href: 'http://www.homes.com/property/2054-s-williams-st-denver-co-80210/id-500012527532/',
+            photos: [
+                {
+                    tag: 'front',
+                    src: '//cdn.homes.com/cgi-bin/readimage/0b548daf3a26a0c976f69ad407f22c36'
+                },
+                {
+                    tag: 'front',
+                    src: '//cdn.homes.com/cgi-bin/readimage/0a6454f631115efc889b553638cbe6e4'
+                },
+                {
+                    tag: 'front',
+                    src: '//cdn.homes.com/cgi-bin/readimage/35f78bbd435abd9f99f2bd8bcb1b9819'
+                },
+                {
+                    tag: 'backyard',
+                    src: '//cdn.homes.com/cgi-bin/readimage/77c4cdbf6d608d6d9d115b2da07be691'
+                },
+                {
+                    tag: 'bathroom',
+                    src: '//cdn.homes.com/cgi-bin/readimage/9fc4a0e67fa0c5a2ec0f8375ec8fa600'
+                },
+                {
+                    tag: 'bathroom',
+                    src: '//cdn.homes.com/cgi-bin/readimage/720a959e8dfafa656549ebdd03f84132'
+                },
+                {
+                    tag: 'bathroom',
+                    src: '//cdn.homes.com/cgi-bin/readimage/4ba52d9b0044e052dc38554291e2f09c'
+                },
+                {
+                    tag: 'bathroom',
+                    src: '//cdn.homes.com/cgi-bin/readimage/080a306fe85085d52bd152659c3fcd72'
+                },
+                {
+                    tag: 'bedroom',
+                    src: '//cdn.homes.com/cgi-bin/readimage/1cd05eed9498d47c070bae3105b08c30'
+                },
+                {
+                    tag: 'bedroom',
+                    src: '//cdn.homes.com/cgi-bin/readimage/2f7e86871824396bb9bf703c465a6143'
+                },
+                {
+                    tag: 'bedroom',
+                    src: '//cdn.homes.com/cgi-bin/readimage/313699ffddc8ffaf24f370b0442c1b1c'
+                },
+                {
+                    tag: 'kitchen',
+                    src: '//cdn.homes.com/cgi-bin/readimage/37950e2eb6de74ca7782f9f696dda5f6'
+                },
+                {
+                    tag: 'kitchen',
+                    src: '//cdn.homes.com/cgi-bin/readimage/b517e97278aea8ffdf519b82d5ffccb0'
+                },
+                {
+                    tag: 'living-room',
+                    src: '//cdn.homes.com/cgi-bin/readimage/2d6a289c11aba4b70e3feb651b676293'
+                },
+                {
+                    tag: 'living-room',
+                    src: '//cdn.homes.com/cgi-bin/readimage/dda39f8d2651c240e83d5fe3a06bbd50'
+                },
+                {
+                    tag: 'living-room',
+                    src: '//cdn.homes.com/cgi-bin/readimage/8db20c6d21fa72d73921034ca50ced6e'
+                }
+            ]
+        },
+        {
+            id: 3631439,
+            href: 'http://www.homes.com/property/77-brookhaven-dr-littleton-co-80123/id-500012274265/',
+            photos: [
+                {
+                    tag: 'front',
+                    src: '//cdn.homes.com/cgi-bin/readimage/58084ebeae128663fa3eb43352668287'
+                },
+                {
+                    tag: 'front',
+                    src: '//cdn.homes.com/cgi-bin/readimage/68daa92891574b0724e0bcd4b6921209'
+                },
+                {
+                    tag: 'front',
+                    src: '//cdn.homes.com/cgi-bin/readimage/481ee53b06b01e6fc134962f05fb8073'
+                },
+                {
+                    tag: 'backyard',
+                    src: '//cdn.homes.com/cgi-bin/readimage/46ac4c91eb050827cefbc78f18ca58c5'
+                },
+                {
+                    tag: 'backyard',
+                    src: '//cdn.homes.com/cgi-bin/readimage/a188ac1fb20ce2978d11ad6e75e71ffd'
+                },
+                {
+                    tag: 'backyard',
+                    src: '//cdn.homes.com/cgi-bin/readimage/66fa1215ae12ac9d77fe655fcaad49b6'
+                },
+                {
+                    tag: 'backyard',
+                    src: '//cdn.homes.com/cgi-bin/readimage/f6566ecaf24d83170c4dd2d4a71cdfe2'
+                },
+                {
+                    tag: 'bathroom',
+                    src: '//cdn.homes.com/cgi-bin/readimage/08446bfffeca309b6692de9159c1f587'
+                },
+                {
+                    tag: 'bathroom',
+                    src: '//cdn.homes.com/cgi-bin/readimage/997372be9c7261ea84e28486b1c148b5'
+                },
+                {
+                    tag: 'bathroom',
+                    src: '//cdn.homes.com/cgi-bin/readimage/50dca64b3689ba46d187fc79945bc794'
+                },
+                {
+                    tag: 'bedroom',
+                    src: '//cdn.homes.com/cgi-bin/readimage/c26eca2adcaa0f67b7676204d4135ed7'
+                },
+                {
+                    tag: 'bedroom',
+                    src: '//cdn.homes.com/cgi-bin/readimage/49dc9cd9da45a2f4b92f33ba4b14e153'
+                },
+                {
+                    tag: 'bedroom',
+                    src: '//cdn.homes.com/cgi-bin/readimage/289c48e2b1ad138caa3bfcb1a0d1ca94'
+                },
+                {
+                    tag: 'bedroom',
+                    src: '//cdn.homes.com/cgi-bin/readimage/7526465690ed534be44af6e62ced4792'
+                },
+                {
+                    tag: 'kitchen',
+                    src: '//cdn.homes.com/cgi-bin/readimage/b3d238de81a644da8ea9a918e010a223'
+                },
+                {
+                    tag: 'kitchen',
+                    src: '//cdn.homes.com/cgi-bin/readimage/997bbe794b92a31b1c7074a78fa88f43'
+                },
+                {
+                    tag: 'kitchen',
+                    src: '//cdn.homes.com/cgi-bin/readimage/c9a7e4a2c56899bae500c5cd70424c87'
+                },
+                {
+                    tag: 'living-room',
+                    src: '//cdn.homes.com/cgi-bin/readimage/a335872153e058ab10441509125c24a9'
+                },
+                {
+                    tag: 'living-room',
+                    src: '//cdn.homes.com/cgi-bin/readimage/1d684d1e16b95b88d8d14002df0bbf98'
+                },
+                {
+                    tag: 'living-room',
+                    src: '//cdn.homes.com/cgi-bin/readimage/9b7c5e747f87c74714d8d7e5d385f5c0'
+                },
+                {
+                    tag: 'stairway',
+                    src: '//cdn.homes.com/cgi-bin/readimage/2eebd95a3dd3b054b97ffde7571c4967'
+                }
+            ]
         }
     ]
 }]);
