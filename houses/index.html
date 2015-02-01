@@ -9,12 +9,12 @@
 
 <body>
     <div ng-controller="CompareCtrl">
-        <img ng-src="{{ photo1.src }}" ng-click="click(0)" />
-        <img ng-src="{{ photo2.src }}" ng-click="click(1)" />
+        <img ng-src="{{ photo1.src }}" ng-click="click(0)" style="max-width:50%"/>
+        <img ng-src="{{ photo2.src }}" ng-click="click(1)" style="max-width:50%"/>
     </div>
     <div ng-controller="ListCtrl">
         <div ng-repeat="parent in parents | orderBy:'-ratio'">
-            {{ parent.name }} ({{ parent.ratio }}) {{ parent.href }}
+            {{ parent.name }} <a target="{{ parent.href }}" href="{{ parent.href }}">{{ parent.href }}</a> ({{ parent.ratio }})
         </div>
     </div>
 </body>
