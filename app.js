@@ -13,10 +13,20 @@ chemistry.controller('CompareCtrl', ['$scope', 'Photos', function($scope, Photos
             return;
         }
 
-        for(var i = 0; i < 2; i++) {
+        while (scopePhotos.length < 2) {
             var randomParent = scopeParent.splice([Math.floor(Math.random() * scopeParent.length)],1)[0];
-            scopeParents[i] = randomParent;
+
+            if (randomParent == null) {
+                scopeParent = parents.slice();
+                continue;
+            }
+
+            scopeParents[scopePhotos.length] = randomParent;
             var randomPhoto = randomParent.photos[Math.floor(Math.random() * randomParent.photos.length)];
+
+            if ( (scopePhotos.length == 1) && (scopePhotos[0].tag != randomPhoto.tag) )
+                continue;
+
             scopePhotos.push(randomPhoto);
         }
 
