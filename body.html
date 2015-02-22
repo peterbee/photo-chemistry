@@ -11,7 +11,7 @@
     <label for="results-toggle" class="results-header">
         <h2>Results</h2>
     </label>
-    <a class="results-item" href="{{ parent.href }}"
+    <a class="results-item" href="{{ parent.href }}" target="{{ parent.href }}"
         style="background-image: url('{{ parent.photos[0].src }}')"
         ng-repeat="parent in parents | orderBy:'-ratio'">
         {{ parent.name }} ({{ parent.ratio }})
