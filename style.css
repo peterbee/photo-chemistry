@@ -20,9 +20,9 @@ img {
     text-align: center;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 479px) {
     .half {
-        max-width: 100%;
+        width: 100%;
     }
 }
 
@@ -44,26 +44,28 @@ img {
 }
 
 #results-list {
-    position: absolute;
+    position: fixed;
     width: 100%;
     bottom: 0;
-    height: 50px;
     background: white;
-    overflow: auto;
-    transition: height 0.5s;
-}
-
-#results-toggle:checked + #results-list {
-    height: 60%;
 }
 
 #results-list .results-header {
     display: block;
-    height: 50px;
     padding: 1px 10px;
     font-weight: bold;
     color: white;
     background-color: darkblue;
+}
+
+#results-list #results-items {
+    height: 0;
+    overflow: auto;
+    transition: height 0.5s;
+}
+
+#results-toggle:checked + #results-list #results-items {
+    height: 50vh;
 }
 
 #results-list .results-item {

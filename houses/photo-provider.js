@@ -7,7 +7,7 @@ chemistry.service('PhotoProvider', ['$http', '$q', function($http, $q) {
         if (!self.deferred) {
             self.deferred = $q.defer();
 
-            $http.get('http://riskimo.mooo.com/house-images/10')
+            $http.get('http://riskimo.mooo.com/house-images/50')
                 .success(function(data, status, headers, config) {
                     self.deferred.resolve(data);
                 })
