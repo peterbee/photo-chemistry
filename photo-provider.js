@@ -1,5 +1,7 @@
-chemistry.service('PhotoProvider', [function() {
-    return [
+chemistry.service('PhotoProvider', ['$http', '$q', function($http, $q) {
+    function Provider() {};
+
+    var testData = [
         {
             id: 5252,
             name: 'Item A',
@@ -41,4 +43,18 @@ chemistry.service('PhotoProvider', [function() {
             ]
         }
     ]
+
+    Provider.prototype.load = function load() {
+        var self = this;
+
+        if (!self.deferred) {
+            self.deferred = $q.defer();
+
+            self.deferred.resolve(testData);
+        }
+
+        return self.deferred.promise;
+    }
+
+    return new Provider();
 }]);

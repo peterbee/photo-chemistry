@@ -1,65 +1,68 @@
 var chemistry = angular.module('chemistry',[]);
 
 chemistry.controller('CompareCtrl', ['$scope', 'Photos', function($scope, Photos) {
-    var parents = Photos.data;
-    var scopeParents = [];
+    Photos.load().then(function(data) {
+        var parents = data;
+        var scopeParents = [];
 
-    function showRandomPhotos() {
-        var scopePhotos = [];
-        var scopeParent = parents.slice();
+        function showRandomPhotos() {
+            var scopePhotos = [];
+            var scopeParent = parents.slice();
 
-        if(parents.length < 2) {
-            alert('Not enough items to compare.');
-            return;
-        }
-
-        while (scopePhotos.length < 2) {
-            var randomParent = scopeParent.splice([Math.floor(Math.random() * scopeParent.length)],1)[0];
-
-            if (randomParent == null) {
-                scopeParent = parents.slice();
-                continue;
+            if(parents.length < 2) {
+                alert('Not enough items to compare.');
+                return;
             }
 
-            scopeParents[scopePhotos.length] = randomParent;
-            var randomPhoto = randomParent.photos[Math.floor(Math.random() * randomParent.photos.length)];
+            while (scopePhotos.length < 2) {
+                var randomParent = scopeParent.splice([Math.floor(Math.random() * scopeParent.length)],1)[0];
 
-            if ( (scopePhotos.length == 1) && (scopePhotos[0].tag != randomPhoto.tag) )
-                continue;
+                if (randomParent == null) {
+                    scopeParent = parents.slice();
+                    continue;
+                }
 
-            scopePhotos.push(randomPhoto);
+                scopeParents[scopePhotos.length] = randomParent;
+                var randomPhoto = randomParent.photos[Math.floor(Math.random() * randomParent.photos.length)];
+
+                if ( (scopePhotos.length == 1) && (scopePhotos[0].tag != randomPhoto.tag) )
+                    continue;
+
+                scopePhotos.push(randomPhoto);
+            }
+
+            $scope.photo1 = scopePhotos[0];
+            $scope.photo2 = scopePhotos[1];
         }
 
-        $scope.photo1 = scopePhotos[0];
-        $scope.photo2 = scopePhotos[1];
-    }
+        $scope.click = function click(id) {
+            var parent = scopeParents[id];
+            Photos.select(parent.id);
 
-    $scope.click = function click(id) {
-        var parent = scopeParents[id];
-        Photos.select(parent.id);
+            for(var i in scopeParents) {
+                var parent = scopeParents[i];
+                Photos.show(parent.id);
+                parent.ratio = Photos.getRatio(parent.id);
+            }
 
-        for(var i in scopeParents) {
-            var parent = scopeParents[i];
-            Photos.show(parent.id);
-            parent.ratio = Photos.getRatio(parent.id);
+            showRandomPhotos();
+
+            Photos.save();
         }
 
+        // initialize view
         showRandomPhotos();
-
-        Photos.save();
-    }
-
-    // initialize view
-    showRandomPhotos();
+    });
 }]);
 
 chemistry.controller('ListCtrl', ['$scope', 'Photos', function($scope, Photos) {
-    $scope.parents = Photos.data;
+    Photos.load().then(function(data) {
+        $scope.parents = data;
+    });
 }]);
 
 chemistry.service('Photos', ['PhotoProvider', function(PhotoProvider) {
     function Photos() {
-        this.data = PhotoProvider;
         this.results = {};
     };
 
@@ -90,6 +93,19 @@ chemistry.service('Photos', ['PhotoProvider', function(PhotoProvider) {
         }
     };
 
+    Photos.prototype.load = function load() {
+        var self = this;
+
+        return PhotoProvider.load().then(function (data) {
+            self.data = data;
+
+            for(var i in self.data) {
+                self.data[i].ratio = self.getRatio(self.data[i].id);
+            }
+            return self.data;
+        });
+    }
+
     // Load persisted data
     var photos = new Photos();
     if(typeof(Storage) !== "undefined") {
@@ -98,9 +114,6 @@ chemistry.service('Photos', ['PhotoProvider', function(PhotoProvider) {
         }
     }
 
-    for(var i in photos.data) {
-        photos.data[i].ratio = photos.getRatio(photos.data[i].id);
-    }
-
     return photos;
+
 }]);
