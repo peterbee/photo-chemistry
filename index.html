@@ -1,21 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="chemistry">
 <head>
-    <link rel="stylesheet" type="text/css" href="photo-chemistry.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../style.css"/>
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
     <script type="text/javascript" src="photo-provider.js"></script>
 </head>
 
 <body>
-    <div ng-controller="CompareCtrl">
-        <img ng-src="{{ photo1.src }}" ng-click="click(0)" />
-        <img ng-src="{{ photo2.src }}" ng-click="click(1)" />
-    </div>
-    <div ng-controller="ListCtrl">
-        <div ng-repeat="parent in parents | orderBy:'-ratio'">
-            {{ parent.name }} ({{ parent.ratio }}) {{ parent.href }}
-        </div>
-    </div>
+    <div ng-include="'body.html'"></div>
 </body>
 </html>

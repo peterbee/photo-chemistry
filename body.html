@@ -1,0 +1,19 @@
+<div id="image-select" ng-controller="CompareCtrl">
+    <div class="half">
+        <img ng-src="{{ photo1.src }}" ng-click="click(0)" />
+    </div>
+    <div class="half">
+        <img ng-src="{{ photo2.src }}" ng-click="click(1)" />
+    </div>
+</div>
+<input id="results-toggle" type="checkbox"/>
+<div id="results-list" ng-controller="ListCtrl">
+    <label for="results-toggle" class="results-header">
+        <h2>Results</h2>
+    </label>
+    <a class="results-item" href="{{ parent.href }}"
+        style="background-image: url('{{ parent.photos[0].src }}')"
+        ng-repeat="parent in parents | orderBy:'-ratio'">
+        {{ parent.name }} ({{ parent.ratio }})
+    </a>
+</div>
