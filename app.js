@@ -1,5 +1,11 @@
 var chemistry = angular.module('chemistry',[]);
 
+chemistry.run(function($document, $rootScope){
+    $document.bind('keyup', function(e) {
+        $rootScope.$broadcast('key', e);
+    });
+  })
+
 chemistry.controller('CompareCtrl', ['$scope', 'Photos', function($scope, Photos) {
     Photos.load().then(function(data) {
         var parents = data;
@@ -39,6 +45,20 @@ chemistry.controller('CompareCtrl', ['$scope', 'Photos', function($scope, Photos
 
             Photos.save();
         }
+
+        $scope.$on('key', function key(event, e) {
+            if (e.which == 37) {
+                // left arrow
+                $scope.click(0);
+            }
+            else if (e.which == 39) {
+                // right arrow
+                $scope.click(1);
+            }
+
+            // Force update to DOM
+            $scope.$apply();
+        })
 
         // initialize view
         showRandomPhotos();
