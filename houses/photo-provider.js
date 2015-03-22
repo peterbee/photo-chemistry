@@ -13,7 +13,11 @@ chemistry.service('PhotoProvider', ['$http', '$q', '$location', function($http, 
         var self = this;
 
         var params = {
-            p_limit: 20
+            p_limit: 8,
+            p_zip: 80220,
+            p_zipMeters: 32000,
+            p_minPrice: 100000,
+            p_maxPrice: 417000
         }
 
         var userParams = $location.search();
@@ -25,7 +29,11 @@ chemistry.service('PhotoProvider', ['$http', '$q', '$location', function($http, 
 
             var method = 'PhotoChem.GetListings';
             var parameters = {
-                limit: Number(params.p_limit)
+                limit: Number(params.p_limit),
+                zip: params.p_zip,
+                "zip-meters": Number(params.p_zipMeters),
+                minPrice: Number(params.p_minPrice),
+                maxPrice: Number(params.p_maxPrice)
             };
 
             jsonRpc(method, parameters)
