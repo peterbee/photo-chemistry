@@ -15,7 +15,7 @@
         <a class="results-item" href="{{ parent.href }}" target="{{ parent.href }}"
             style="background-image: url('{{ parent.photos[0].src }}')"
             ng-repeat="parent in parents | orderBy:'-ratio'">
-            {{ parent.properties.Address.Street }} ${{ parent.properties.CurrentPrice }}
+            {{ parent.properties.Address.Street }} ${{ parent.properties.CurrentPrice }} ({{ parent.ratio }})
         </a>
     </div>
 </div>
