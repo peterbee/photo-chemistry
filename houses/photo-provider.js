@@ -14,7 +14,7 @@ chemistry.service('PhotoProvider', ['$http', '$q', '$location', function($http, 
 
         var params = {
             p_limit: 8,
-            p_zip: 80220,
+            p_zip: "80220",
             p_zipMeters: 32000,
             p_minPrice: 100000,
             p_maxPrice: 417000
