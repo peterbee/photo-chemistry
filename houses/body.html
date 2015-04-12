@@ -19,3 +19,30 @@
         </a>
     </div>
 </div>
+<input id="filters-toggle" type="checkbox"/>
+<div id="user-filters" ng-controller="FilterCtrl">
+    <label for="filters-toggle" class="filters-header">
+        <h2>Filters</h2>
+    </label>
+    <div id="filter-form">
+        <div>
+            <label>ZIP</label>
+            <input type="text" name="p_zip"/>
+        </div>
+        <div>
+            <label>Radius (meters)</label>
+            <input type="text" name="p_zipMeters"/>
+        </div>
+        <div>
+            <label>Minimum Price</label>
+            <input type="text" name="p_minPrice"/>
+        </div>
+        <div>
+            <label>Maximum Price</label>
+            <input type="text" name="p_maxPrice"/>
+        </div>
+        <div>
+            <input type="submit" value="Search" ng-click="filter()"/>
+        </div>
+    </div>
+</div>

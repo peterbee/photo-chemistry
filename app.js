@@ -71,6 +71,13 @@ chemistry.controller('ListCtrl', ['$scope', 'Photos', function($scope, Photos) {
     });
 }]);
 
+chemistry.controller('FilterCtrl', ['$scope', function($scope) {
+    $scope.filter = function filter() {
+        // TODO: reinitialize CompareCtrl and ListCtrl
+        console.error('Filtering not implemented yet.');
+    }
+}]);
+
 chemistry.service('Photos', ['PhotoProvider', function(PhotoProvider) {
     function Photos() {
         this.results = {};
