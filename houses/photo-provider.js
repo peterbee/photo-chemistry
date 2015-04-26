@@ -11,6 +11,8 @@ chemistry.service('PhotoProvider', ['$http', '$q', '$location', function($http, 
     }
 
     // Update hash with defaults
+    var userParams = $location.search();
+    angular.extend(params, userParams);
     angular.forEach(params, function(value, key) {
         $location.search(key, value);
     });
@@ -26,7 +28,6 @@ chemistry.service('PhotoProvider', ['$http', '$q', '$location', function($http, 
         var self = this;
 
         var userParams = $location.search();
-
         angular.extend(params, userParams);
 
         if (!self.deferred) {
