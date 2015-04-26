@@ -2,6 +2,19 @@ chemistry.service('PhotoProvider', ['$http', '$q', '$location', function($http, 
 
     var rpcEndpoint = 'http://dubdub.jakegub.com:10000/rpc';
 
+    var params = {
+        p_limit: 8,
+        p_zip: "80220",
+        p_zipMeters: 32000,
+        p_minPrice: 100000,
+        p_maxPrice: 417000
+    }
+
+    // Update hash with defaults
+    angular.forEach(params, function(value, key) {
+        $location.search(key, value);
+    });
+
     function Provider() {};
 
     function jsonRpc (method, parameters, config){
@@ -11,14 +24,6 @@ chemistry.service('PhotoProvider', ['$http', '$q', '$location', function($http, 
 
     Provider.prototype.load = function load() {
         var self = this;
-
-        var params = {
-            p_limit: 8,
-            p_zip: "80220",
-            p_zipMeters: 32000,
-            p_minPrice: 100000,
-            p_maxPrice: 417000
-        }
 
         var userParams = $location.search();
 

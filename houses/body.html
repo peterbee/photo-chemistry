@@ -27,19 +27,19 @@
     <div id="filter-form">
         <div>
             <label>ZIP</label>
-            <input type="text" name="p_zip"/>
+            <input type="text" ng-model="filters.p_zip"/>
         </div>
         <div>
             <label>Radius (meters)</label>
-            <input type="text" name="p_zipMeters"/>
+            <input type="text" ng-model="filters.p_zipMeters"/>
         </div>
         <div>
             <label>Minimum Price</label>
-            <input type="text" name="p_minPrice"/>
+            <input type="text" ng-model="filters.p_minPrice"/>
         </div>
         <div>
             <label>Maximum Price</label>
-            <input type="text" name="p_maxPrice"/>
+            <input type="text" ng-model="filters.p_maxPrice"/>
         </div>
         <div>
             <input type="submit" value="Search" ng-click="filter()"/>

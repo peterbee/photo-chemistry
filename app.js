@@ -71,10 +71,17 @@ chemistry.controller('ListCtrl', ['$scope', 'Photos', function($scope, Photos) {
     });
 }]);
 
-chemistry.controller('FilterCtrl', ['$scope', function($scope) {
+chemistry.controller('FilterCtrl', ['$scope', '$location', function($scope, $location) {
+    $scope.filters = angular.copy($location.search());
+
     $scope.filter = function filter() {
-        // TODO: reinitialize CompareCtrl and ListCtrl
-        console.error('Filtering not implemented yet.');
+        // Update hash
+        angular.forEach($scope.filters, function(value, key) {
+            $location.search(key, value);
+        });
+
+        // Refresh page
+        window.location.reload();
     }
 }]);
 
